@@ -1,8 +1,7 @@
 defmodule Greeter do
-
-  def for(name, greeting) do
+ def for(name, greeting) do
     fn
-      (^name, greeting) -> "#{greeting} #{name}"
+      (^name) -> "#{greeting} #{name}"
       (_) -> "I don't know you"
     end
   end
